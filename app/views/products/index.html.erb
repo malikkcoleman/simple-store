@@ -1,6 +1,11 @@
 <h1>Products</h1>
 <p>Find me in app/views/products/index.html.erb</p>
 <% @products.each do |product|%>
+  <% @categories.each do |category|%>
+      <% if product.category_id == category.id%>
+        <p><%= category.name%></p>
+      <% end %>
+    <% end %>
   <a href="/products/<%= product.id%>"><p><%= product.title%></p></a>
 
 <% end %>
