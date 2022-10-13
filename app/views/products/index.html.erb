@@ -1,9 +1,6 @@
 <h1>Products</h1>
 <p>Find me in app/views/products/index.html.erb</p>
 <% @products.each do |product|%>
-  <p><%= product.title%></p>
-  <ul>
-    <li>$<%= product.price%></li>
-    <li><%= product.stock_quantity%></li>
-  </ul>
+  <a href="/products/<%= product.id%>"><p><%= product.title%></p></a>
+
 <% end %>
